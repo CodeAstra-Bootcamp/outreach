@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'common/header' %>
-<div class="container">
+<%= render 'common/header' unless landing_page? %>
+<div class="<%= 'container' unless landing_page? %>">
   <%= yield %>
 </div>
 
