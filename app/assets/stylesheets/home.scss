@@ -1,3 +1,28 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#land {
+  position: relative;
+  height: 100vh;
+  background-color: $dark-color;
+  color: $light-color;
+  border: 1px solid transparent;
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  #links {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+
+    a {
+      color: $light-color;
+      display: inline-block;
+      transition: transform 0.2s ease-in;
+
+      &:hover {
+        text-decoration: none;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
