@@ -1,0 +1,8 @@
+<%= link_to "Add a new Post", new_article_path, class: "pull-right btn btn-primary" %>
+<h1>Outreach Blog</h1>
+<% @articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <p>
+    <%= article.body %>
+  </p>
+<% end %>

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get 'faq' => 'home#faq'
 
+  get 'blog' => 'articles#index'
+
+  resources :articles, except: [:index]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
