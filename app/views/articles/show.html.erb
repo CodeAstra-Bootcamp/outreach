@@ -2,3 +2,18 @@
 <p>
   <%= @article.body %>
 </p>
+
+<h2>Add a Comment</h2>
+<%= simple_form_for [@article, @new_comment] do |f| %>
+  <%= f.input :name, placeholder: "Please enter your name" %>
+  <%= f.input :body, placeholder: "What do you think of this article?" %>
+  <%= f.submit "Add Comment", class: "btn btn-primary" %>
+<% end %>
+
+<h2>All Comments</h2>
+<% @comments.each do |comment| %>
+  <p>
+    <b><%= comment.name %>:</b> <br>
+    <%= comment.body %>
+  </p>
+<% end %>

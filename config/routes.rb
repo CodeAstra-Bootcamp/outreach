@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   get 'blog' => 'articles#index'
 
-  resources :articles, except: [:index]
+  resources :articles, except: [:index] do
+    resources :comments, only: [:create]
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
